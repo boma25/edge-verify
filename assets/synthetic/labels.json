@@ -1,0 +1,226 @@
+{
+  "generatedOn": "2026-10-04",
+  "seed": 7,
+  "items": [
+    {
+      "id": "addr-01-clean",
+      "file": "addr-01-clean.jpg",
+      "kind": "address",
+      "variant": "clean",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "utility_bill",
+        "fullName": "John Doe",
+        "addressLine": "123 Main Street",
+        "city": "Springfield",
+        "state": "IL",
+        "issueDate": "2026-09-09",
+        "issuer": "Lumen Power Distribution"
+      },
+      "fieldsVisible": true,
+      "expectedOutcome": "approve"
+    },
+    {
+      "id": "addr-01-mild",
+      "file": "addr-01-mild.jpg",
+      "kind": "address",
+      "variant": "mild",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "utility_bill",
+        "fullName": "John Doe",
+        "addressLine": "123 Main Street",
+        "city": "Springfield",
+        "state": "IL",
+        "issueDate": "2026-09-23",
+        "issuer": "Lumen Power Distribution"
+      },
+      "fieldsVisible": true,
+      "expectedOutcome": "approve"
+    },
+    {
+      "id": "addr-01-stale",
+      "file": "addr-01-stale.jpg",
+      "kind": "address",
+      "variant": "stale",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "utility_bill",
+        "fullName": "John Doe",
+        "addressLine": "123 Main Street",
+        "city": "Springfield",
+        "state": "IL",
+        "issueDate": "2026-04-20",
+        "issuer": "Lumen Power Distribution"
+      },
+      "fieldsVisible": true,
+      "expectedOutcome": "retry"
+    },
+    {
+      "id": "addr-01-future",
+      "file": "addr-01-future.jpg",
+      "kind": "address",
+      "variant": "future",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "utility_bill",
+        "fullName": "John Doe",
+        "addressLine": "123 Main Street",
+        "city": "Springfield",
+        "state": "IL",
+        "issueDate": "2026-11-16",
+        "issuer": "Lumen Power Distribution"
+      },
+      "fieldsVisible": true,
+      "expectedOutcome": "retry"
+    },
+    {
+      "id": "addr-01-name_mismatch",
+      "file": "addr-01-name_mismatch.jpg",
+      "kind": "address",
+      "variant": "name_mismatch",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "utility_bill",
+        "fullName": "Jane Doe",
+        "addressLine": "123 Main Street",
+        "city": "Springfield",
+        "state": "IL",
+        "issueDate": "2026-08-22",
+        "issuer": "Lumen Power Distribution"
+      },
+      "fieldsVisible": true,
+      "expectedOutcome": "human_review"
+    },
+    {
+      "id": "addr-01-blurry",
+      "file": "addr-01-blurry.jpg",
+      "kind": "address",
+      "variant": "blurry",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "utility_bill",
+        "fullName": "John Doe",
+        "addressLine": "123 Main Street",
+        "city": "Springfield",
+        "state": "IL",
+        "issueDate": "2026-09-28",
+        "issuer": "Lumen Power Distribution"
+      },
+      "fieldsVisible": false,
+      "expectedOutcome": "retry"
+    },
+    {
+      "id": "addr-01-cropped",
+      "file": "addr-01-cropped.jpg",
+      "kind": "address",
+      "variant": "cropped",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "utility_bill",
+        "fullName": "John Doe",
+        "addressLine": "123 Main Street",
+        "city": "Springfield",
+        "state": "IL",
+        "issueDate": "2026-08-18",
+        "issuer": "Lumen Power Distribution"
+      },
+      "fieldsVisible": false,
+      "expectedOutcome": "retry"
+    },
+    {
+      "id": "addr-nodoc-01",
+      "file": "addr-nodoc-01.jpg",
+      "kind": "address",
+      "variant": "not_document",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "not_a_document",
+        "fullName": null,
+        "addressLine": null,
+        "city": null,
+        "state": null,
+        "issueDate": null,
+        "issuer": null
+      },
+      "fieldsVisible": false,
+      "expectedOutcome": "retry"
+    },
+    {
+      "id": "addr-nodoc-02",
+      "file": "addr-nodoc-02.jpg",
+      "kind": "address",
+      "variant": "not_document",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "not_a_document",
+        "fullName": null,
+        "addressLine": null,
+        "city": null,
+        "state": null,
+        "issueDate": null,
+        "issuer": null
+      },
+      "fieldsVisible": false,
+      "expectedOutcome": "retry"
+    },
+    {
+      "id": "addr-nodoc-03",
+      "file": "addr-nodoc-03.jpg",
+      "kind": "address",
+      "variant": "not_document",
+      "expected": {
+        "fullName": "John Doe",
+        "city": "Springfield",
+        "state": "IL"
+      },
+      "truth": {
+        "documentType": "not_a_document",
+        "fullName": null,
+        "addressLine": null,
+        "city": null,
+        "state": null,
+        "issueDate": null,
+        "issuer": null
+      },
+      "fieldsVisible": false,
+      "expectedOutcome": "retry"
+    }
+  ]
+}

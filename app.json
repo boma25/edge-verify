@@ -1,25 +1,35 @@
 {
   "expo": {
-    "name": "edge-verify",
+    "name": "Edge Verify",
     "slug": "edge-verify",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#14111F",
+    "plugins": [
+      "react-native-litert-lm",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Edge Verify reads the photo you pick so it can be verified on this device.",
+          "cameraPermission": "Edge Verify uses the camera to photograph a document or finished job. Photos stay on this device."
+        }
+      ]
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "dev.edgeverify.app"
     },
     "android": {
+      "package": "dev.edgeverify.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#14111F",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }

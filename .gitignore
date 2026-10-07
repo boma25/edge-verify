@@ -39,3 +39,11 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# local Python env for npm run synthetic
+.venv-synthetic/
+
+# local Expo module build outputs
+modules/**/android/build/
+modules/**/android/.gradle/
+modules/**/android/.cxx/

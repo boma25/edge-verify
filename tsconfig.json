@@ -1,6 +1,17 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "jsx": "react-jsx",
+    "types": ["node"]
+  },
+  "include": [
+    "App.tsx",
+    "index.ts",
+    "src/**/*",
+    "scripts/**/*",
+    "assets/synthetic/**/*.ts",
+    "modules/litert-edge/index.ts",
+    "modules/litert-edge/src/**/*.ts"
+  ]
 }

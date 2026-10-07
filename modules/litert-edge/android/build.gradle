@@ -1,0 +1,30 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'expo.modules.litertedge'
+version = '0.1.0'
+
+android {
+  namespace "expo.modules.litertedge"
+  defaultConfig {
+    versionCode 1
+    versionName "0.1.0"
+    minSdkVersion 24
+  }
+  lintOptions {
+    abortOnError false
+  }
+}
+
+dependencies {
+  implementation("com.google.ai.edge.litertlm:litertlm-android:0.18.0")
+}
+
+// @ExperimentalApi (ExperimentalFlags / getBenchmarkInfo) — also annotated @OptIn in Kotlin sources.
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+  compilerOptions {
+    freeCompilerArgs.add("-opt-in=com.google.ai.edge.litertlm.ExperimentalApi")
+  }
+}
